@@ -1,0 +1,7 @@
+.home-layout {
+  margin-top: 30rem;
+
+  @media only screen and (max-width: 950px) {
+    margin-top: 20rem;
+  }
+}

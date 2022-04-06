@@ -1,0 +1,126 @@
+.intro-section {
+  color: white;
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  .blog-title {
+    position: absolute;
+    top: -30%;
+    font-size: 3.5rem;
+    color: white;
+    opacity: 0.8;
+    font-family: 'Dancing Script', cursive;
+
+    @media only screen and (max-width: 950px) {
+      top: -200px;
+      font-size: 2rem;
+      padding: 1rem;
+    }
+  }
+
+  .intro-img {
+    position: relative;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.3);
+
+    img {
+      border: 1px solid rgba($color: #646464, $alpha: 1);
+      top: -70%;
+      position: absolute;
+      display: block;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+
+  .intro {
+    margin-top: 2rem;
+    width: 1250px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 0.2s ease-out;
+
+    @media only screen and (max-width: 1250px) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 950px) {
+      flex-direction: column;
+    }
+
+    .posts {
+      border-radius: 5px;
+      padding: 2rem 6rem;
+      overflow: hidden;
+      overflow-y: scroll;
+      height: 700px;
+      scrollbar-color: #cccccc #f0f0f0;
+      background-color: rgba($color: #000000, $alpha: 0.05);
+      scrollbar-width: thin;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      & > h2 {
+        font-size: 1.8rem;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+      }
+
+      & > div {
+        margin-bottom: 3rem;
+      }
+
+      @media only screen and (max-width: 950px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+
+        overflow: auto;
+        overflow-y: auto;
+        height: auto;
+      }
+    }
+
+    .text {
+      width: 50%;
+      margin-left: 2rem;
+
+      @media only screen and (max-width: 950px) {
+        width: 100%;
+        margin: 0;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}

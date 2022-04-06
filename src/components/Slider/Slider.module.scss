@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  width: 100%;
+
+  .images {
+    height: 550px;
+    overflow: hidden;
+    overflow-x: scroll;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+      display: block;
+      width: 1150px;
+      object-fit: cover;
+
+      @media only screen and (max-width: 950px) {
+        width: 950px;
+      }
+
+      @media only screen and (max-width: 650px) {
+        width: 650px;
+        height: 550px;
+      }
+
+      @media only screen and (max-width: 450px) {
+        width: 450px;
+      }
+    }
+  }
+
+  svg {
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    top: 45%;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  .left-arrow {
+    left: 50px;
+
+    @media only screen and (max-width: 650px) {
+      left: 15px;
+    }
+  }
+
+  .right-arrow {
+    right: 50px;
+
+    @media only screen and (max-width: 650px) {
+      right: 15px;
+    }
+  }
+
+  .title {
+    left: 35%;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.571);
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    bottom: 50px;
+
+    @media only screen and (max-width: 650px) {
+      width: 100%;
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.container {
+  overflow: hidden;
+  background-color: white;
+  width: 350px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 3px;
+
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  //border: 1px solid rgba($color: #000000, $alpha: 0.2);
+
+  @media only screen and (max-width: 650px) {
+    width: 100%;
+  }
+
+  .container-link {
+    display: block;
+    color: black;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .desc {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .read-more {
+      display: block;
+      padding: 1rem;
+      color: rgba($color: #247cff, $alpha: 1);
+      text-align: center;
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
