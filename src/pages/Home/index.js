@@ -1,6 +1,7 @@
 // MODULES
 import React from 'react';
 import cn from 'classnames';
+import { IoIosArrowDown } from 'react-icons/io';
 
 // COMPONENTS
 import Header from '../../components/Header';
@@ -23,14 +24,14 @@ function Home() {
         <h1>About The Blog</h1>
         <div className={styles['intro']}>
           <div className={cn(styles['posts'])}>
-            <h2>Posts</h2>
+            <h2 className={cn(styles['title'])}>
+              Posts <IoIosArrowDown />
+            </h2>
 
             <Post
-              imgSrc="/assets/images/profile.JPG"
+              imgSrc="/assets/images/first-gocmen.jpg"
               headline="Esnaf Gocmenlerden Sikayetci"
-              desc="Beylikduzu esnaflar ile yaptigimiz roportaj ve aldigimi.ac est feugiat, nec malesuada dui ullamcorper. In
-              velit nunc, facilisis nec volutpat non, lacinia quis turpis.
-              Vivamus sed nunc eu massa posue.."
+              desc=""
               to="/posts/1"
             />
             <Post

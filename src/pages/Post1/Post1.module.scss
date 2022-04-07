@@ -1,3 +1,13 @@
+.background-section {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-185deg, #fffdf4, rgb(255, 245, 240));
+}
+
 .post-section {
   display: flex;
   justify-content: center;
@@ -32,39 +42,90 @@
   .post {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;
-    width: 1150px;
+    width: 950px;
     background-color: white;
     overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 1200px;
 
-    @media only screen and (max-width: 1250px) {
+    @media only screen and (max-width: 950px) {
       width: 100%;
     }
 
-    .news-pic-area {
-      position: relative;
+    .info-area {
+      width: 100%;
+      margin: 1rem 1.5rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 14px;
+      color: rgba($color: #000000, $alpha: 0.8);
+      font-weight: 600;
 
-      .news-pic {
-        width: 100%;
-        height: 550px;
-        object-fit: cover;
-        display: block;
+      .date {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        svg {
+          font-size: 1.1rem;
+          margin-left: 0.2rem;
+        }
       }
 
-      .news-pic-title-area {
-        position: absolute;
-        top: 400px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
+      .author {
+        margin-left: 1.2rem;
+      }
+    }
 
-        .title {
-          width: 50%;
-          text-align: center;
-          background-color: rgba(255, 255, 255, 0.671);
-          padding: 1.5rem;
-          font-size: 1.5rem;
-          font-weight: bold;
+    h2 {
+      margin: 0 1.5rem;
+      width: 100%;
+    }
+
+    .content {
+      margin: 1.5rem;
+      font-size: 18px;
+      letter-spacing: 0.7px;
+      line-height: 30px;
+
+      .visual-area {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 2rem;
+
+        @media only screen and (max-width: 950px) {
+          flex-direction: column;
         }
+
+        .left {
+          img {
+            width: 300px;
+            border-radius: 5px;
+            display: block;
+
+            @media only screen and (max-width: 950px) {
+              width: 100%;
+            }
+          }
+        }
+
+        .right {
+          margin-left: 2rem;
+
+          @media only screen and (max-width: 950px) {
+            margin-left: 0;
+            margin-top: 2rem;
+          }
+        }
+      }
+
+      p {
+        margin-top: 1rem;
       }
     }
   }

@@ -7,6 +7,7 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  background: linear-gradient(-185deg, #fffdf4, rgb(255, 245, 240));
 
   .blog-title {
     position: absolute;
@@ -86,6 +87,17 @@
 
       & > div {
         margin-bottom: 3rem;
+      }
+
+      .title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        svg {
+          margin-left: 0.5rem;
+          margin-top: 0.2rem;
+        }
       }
 
       @media only screen and (max-width: 950px) {

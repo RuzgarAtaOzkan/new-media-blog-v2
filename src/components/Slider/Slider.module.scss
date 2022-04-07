@@ -1,9 +1,13 @@
 .container {
   position: relative;
-  width: 100%;
+  width: 950px;
+
+  @media only screen and (max-width: 950px) {
+    width: 100%;
+  }
 
   .images {
-    height: 550px;
+    height: 520px;
     overflow: hidden;
     overflow-x: scroll;
     display: flex;
@@ -12,7 +16,7 @@
 
     img {
       display: block;
-      width: 1150px;
+      width: 950px;
       object-fit: cover;
 
       @media only screen and (max-width: 950px) {
@@ -30,13 +34,25 @@
     }
   }
 
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .images::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .images {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
   svg {
     position: absolute;
     color: white;
-    font-size: 4rem;
+    font-size: 5rem;
     top: 45%;
-    opacity: 0.7;
     cursor: pointer;
+    color: rgba($color: #ececec, $alpha: 1);
+    background-color: rgba($color: rgb(0, 0, 0), $alpha: 0.6);
   }
 
   .left-arrow {
@@ -56,18 +72,27 @@
   }
 
   .title {
-    left: 35%;
+    left: 5%;
     position: absolute;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.571);
     padding: 1.5rem;
     font-size: 1.5rem;
     font-weight: bold;
-    bottom: 50px;
+    bottom: 30px;
+    color: white;
 
     @media only screen and (max-width: 650px) {
       width: 100%;
       left: 0;
     }
+  }
+
+  .shadow {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.55) -20px -80px 16px 20px inset;
   }
 }

@@ -45,6 +45,7 @@ function Slider({ imgSrcs = [], title = '' }) {
         className={cn(styles['right-arrow'])}
       />
 
+      <div className={cn(styles['shadow'])} />
       <div className={cn(styles['title'])}>{title}</div>
     </div>
   );
